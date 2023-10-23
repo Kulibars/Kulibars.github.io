@@ -7,14 +7,15 @@
     <meta name="keywords"  content="html, css">
     <title>about me</title>
     <link rel="stylesheet" href="style.css">
-</head>
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=UrLgA9L0UV1ysAndDDtM6e6QrAX7TKsfsLqc-mYsQMYEluGpK0CRgicyGS63NBtawGGBaIkwaDrr0369mews3Q" charset="UTF-8"></script></head>
 <body>
+<div class="container">
     <div class="header">
         <div class="head-col">
             <h1>my page</h1>
         </div>
     </div>
-    <div class="container" id="con1">
+    <div class="contains_box" id="con1">
         <div class="block">
             <img src="280198319_1125596841630776_3220219546144738447_n.jpg" alt="Мое фото">
             <div class="about_me">
@@ -26,14 +27,53 @@
             </div>
         </div>
     </div>
-    <div class="container" id="con2">
+    <div class="contains_box" id="con2">
         <div class="block">
-            <div class="social">
+           <div class="social">
                 <a href="https://www.facebook.com/profile.php?id=100004160437925" target="_blank">facebook</a>
                 <a href="https://vk.com/id24192203" target="_blank">В контакте</a>
                 <a href="https://www.instagram.com/t_e_s_s_e_r_a_c_t/" target="_blank">instagram</a>
-            </div>               
+            </div>              
         </div>
     </div>
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>

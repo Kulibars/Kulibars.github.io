@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 body, .header {
     position: relative;
     background-position: center center;
@@ -12,17 +13,23 @@ body, .header {
     background-attachment: fixed;
     background-image: url("IMG_20190224_144544.jpg");
     background-size: cover;
-    position: relative;
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
 }
 
-.header {
-    background-image: url("IMG_8570.jpg");
 
+
+.header {
+
+    background-image: url("IMG_8570.jpg");
+    min-width: 100%;
+    height: 800px;
 }
 
 .header .head-col {
     position: absolute;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     /* background-size: 100%; */
     background: linear-gradient(to top, #474220, 30%, transparent);
@@ -36,27 +43,34 @@ body, .header {
     color: #474220;
 }
 
-.container {
-    width:100vw;
+.contains_box {
+    width: 100%;
+
+    /* border: 4px solid black; */
 }
 
 #con1 {
-    padding: 50px;
     background: linear-gradient(#474220, 50%, black);
+    padding: 50px 0 50px 0;
 }
 
 #con2{
     height: 800px;
-    background: linear-gradient(to bottom, black, 20%, transparent);
-    padding: 50px;
+    background: linear-gradient(to bottom, black, 40%, transparent);
 }
 
-#con1 .block, #con2 .block {
-    padding: 10px;
-    border-radius: 20px;
-    background: #f5f5f526;
+.contains_box {
+    width: 100%;
+}
+
+.block {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    width: 90%;
     /* display: block; */
     height: 100%;
+    border-radius: 20px;
+    background: #f5f5f526;
 }
 
 #con1 .block {
@@ -72,15 +86,15 @@ body, .header {
     width: 75%;
 }
 
-#con1 .block .about_me {
-    font-size: medium;
-}
 
 #con1 .block img {
+    border: 2px solid black;
     display: block;
     width: 25%;
     border-radius: 20px;
 }
+
+
 
 #con2 .social {
     display: flex;
@@ -90,21 +104,76 @@ body, .header {
 }
 
 #con2 .social a {
-    width: 30%;
+    margin: 10px;
+    width: 90%;
     color: whitesmoke;
     border: 2px solid black;
     text-decoration: none;
-    padding: 15px;
-    margin: 5px;
+    padding: 10px 0 10px 0;
     border-style: solid;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    text-align: center;
 }
 
+
+@media (max-width: 800px) {
+    .container {
+        position: absolute;
+    }
+
+    #con1 .block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #con1 .block .about_me {
+        margin: 20px auto 20px auto;
+    }
+    
+    /* #con1 .block .about_me {
+        background: #f5f5f526;
+        padding: 10px;
+        margin-left: 10px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 75%;
+    } */
+    
+    
+    #con1 .block img {
+        margin-top: 20px;
+        width: 80%;
+        border: 2px solid black;
+        display: block;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .block {
+        width: 100%;
+        border-radius: 0;
+        background: #f5f5f526;
+
+    }
+    #con2 .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #con2 .social a {
+        margin: 10px auto;
+    }
+
+
+}  
 
 
 
